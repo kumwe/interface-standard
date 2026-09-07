@@ -1,15 +1,48 @@
 {
-  "schema": "kumwe-capabilities/v1",
-  "package": "kumwe/interface-standard",
-  "capabilities": [
-    {
-      "id": "interface.surface.declaration",
-      "description": "Strict owner-bound semantic interface declarations with canonical serialization."
-    },
-    {
-      "id": "interface.surface.conformance",
-      "description": "Deterministic complete diagnostics for KIS 1.0 actor, intent, state, customization and responsive relationships."
-    }
-  ],
-  "authority": "No trust, authorization, activation, persistence or rendering authority."
+    "schema": "kumwe-package-capabilities/v1",
+    "package": "kumwe/interface-standard",
+    "release": "0.1.1",
+    "namespace": "Kumwe\\InterfaceStandard\\",
+    "responsibility": "Typed interface declarations and deterministic semantic conformance.",
+    "non_responsibilities": [
+        "Host trust, final authorization and active generation selection",
+        "Persistence, durable transactions, transport and worker lifecycle"
+    ],
+    "capabilities": [
+        {
+            "id": "interface-standard.portable",
+            "title": "Typed interface declarations and deterministic semantic conformance.",
+            "description": "Canonical portable declarations, behavior and explicit construction; the host retains operational authority.",
+            "symbols": [
+                "Kumwe\\InterfaceStandard\\ConformanceDiagnostic",
+                "Kumwe\\InterfaceStandard\\ConformanceSeverity",
+                "Kumwe\\InterfaceStandard\\CustomizationPermission",
+                "Kumwe\\InterfaceStandard\\CustomizationScope",
+                "Kumwe\\InterfaceStandard\\CustomizationSlot",
+                "Kumwe\\InterfaceStandard\\IconName",
+                "Kumwe\\InterfaceStandard\\InterfaceStandardVersion",
+                "Kumwe\\InterfaceStandard\\ResourceName",
+                "Kumwe\\InterfaceStandard\\ResponsiveElement",
+                "Kumwe\\InterfaceStandard\\ResponsivePriority",
+                "Kumwe\\InterfaceStandard\\SurfaceActor",
+                "Kumwe\\InterfaceStandard\\SurfaceArea",
+                "Kumwe\\InterfaceStandard\\SurfaceConformanceReport",
+                "Kumwe\\InterfaceStandard\\SurfaceConformanceValidator",
+                "Kumwe\\InterfaceStandard\\SurfaceConformanceViolation",
+                "Kumwe\\InterfaceStandard\\SurfaceDeclaration",
+                "Kumwe\\InterfaceStandard\\SurfaceDefinition",
+                "Kumwe\\InterfaceStandard\\SurfaceId",
+                "Kumwe\\InterfaceStandard\\SurfaceIntent",
+                "Kumwe\\InterfaceStandard\\SurfacePattern",
+                "Kumwe\\InterfaceStandard\\SurfaceState"
+            ],
+            "documentation": [
+                "docs/public-api.md",
+                "docs/architecture.md",
+                "docs/integration.md"
+            ]
+        }
+    ],
+    "native_requirements": null,
+    "deprecations": []
 }

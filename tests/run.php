@@ -52,6 +52,7 @@ foreach (['standard' => 'kis-2.0', 'area' => 'unknown', 'actor' => 'unknown', 'i
     $invalid = $data; $invalid[$key] = $value; refuses(fn () => SurfaceDefinition::fromArray($owner, $invalid));
 }
 foreach ([' purpose ', '', "Line\nTwo", '{expression}', 'javascript:run()', str_repeat('a', 256)] as $purpose) { $invalid = $data; $invalid['purpose'] = $purpose; refuses(fn () => SurfaceDefinition::fromArray($owner, $invalid)); }
+$invalid = $data; $invalid['purpose'] = "Invalid \xff UTF-8"; refuses(fn () => SurfaceDefinition::fromArray($owner, $invalid));
 foreach (['capabilities', 'states', 'customization', 'responsive'] as $key) {
     $invalid = $data; $invalid[$key][] = $invalid[$key][0]; refuses(fn () => SurfaceDefinition::fromArray($owner, $invalid));
     $invalid = $data; $invalid[$key] = ['named' => $invalid[$key][0]]; refuses(fn () => SurfaceDefinition::fromArray($owner, $invalid));
