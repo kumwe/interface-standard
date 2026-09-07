@@ -31,3 +31,7 @@ App integration round. Do not claim a release exists until GitHub publishes it.
 Before publication, the workflow resolves production dependencies and verifies
 all selected Kumwe stable version tags against Composer source and dist commits.
 Run bash tools/test-package-dependencies.sh when changing that verifier.
+
+Access Control is not yet indexed by Packagist. The explicit GitHub VCS repository
+resolves its real stable tag and ZIP archive; consumers must configure that
+repository at their Composer root until it is registered.
