@@ -18,24 +18,27 @@ $package = $manifest;
 unset($package['require-dev'], $package['autoload-dev'], $package['scripts'], $package['archive']);
 $package['version'] = 'dev-candidate';
 $package['dist'] = ['type' => 'zip', 'url' => 'file://' . $archive, 'shasum' => sha1_file($archive)];
-$repositories = [['type' => 'package', 'package' => $package]];
+$repositories = array_merge([['type' => 'package', 'package' => $package]], $manifest['repositories'] ?? []);
 $require = [$manifest['name'] => 'dev-candidate'];
-$sourceDependencies = json_decode(getenv('KUMWE_SOURCE_DEPENDENCIES') ?: '{}', true, 512, JSON_THROW_ON_ERROR);
+$sourceDependencies = json_decode(file_get_contents($root . '/resources/source-ci-dependencies.json'), true, 512, JSON_THROW_ON_ERROR);
 $sourceRecords = [];
 foreach ($sourceDependencies as $name => $dependency) {
-    $path = realpath($dependency['path']);
-    if ($path === false || !is_file($path . '/composer.json')) { throw new RuntimeException('Invalid dependency path.'); }
-    $metadata = json_decode(file_get_contents($path . '/composer.json'), true, 512, JSON_THROW_ON_ERROR);
-    if ($metadata['name'] !== $name) { throw new RuntimeException('Dependency identity mismatch.'); }
-    $version = $dependency['version'] ?? 'dev-source';
-    $repositories[] = ['type' => 'path', 'url' => $path, 'options' => ['symlink' => false, 'versions' => [$name => $version]]];
-    $require[$name] = $dependency['version'] ?? ('dev-source as ' . $dependency['satisfies']);
-    $sourceRecords[$name] = ['mode' => 'local-source-alias', 'path' => $path, 'candidate_coordinate' => $require[$name], 'composer_sha256' => hash_file('sha256', $path . '/composer.json')];
+    $require[$name] = $dependency['version'];
 }
-if ($sourceDependencies !== [] && !array_any($sourceDependencies, static fn(array $dependency): bool => isset($dependency['version']))) { $repositories[] = ['packagist.org' => false]; }
 $consumer = ['name' => 'kumwe/isolated-consumer', 'require' => $require, 'repositories' => $repositories, 'minimum-stability' => 'dev', 'prefer-stable' => true];
 file_put_contents($temporary . '/composer.json', json_encode($consumer, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) . "\n");
 $run(['composer', 'install', '--no-dev', '--classmap-authoritative', '--no-scripts', '--no-plugins', '--no-interaction'], $temporary);
+$resolved = json_decode(file_get_contents($temporary . '/vendor/composer/installed.json'), true, 512, JSON_THROW_ON_ERROR);
+$packages = array_column($resolved['packages'], null, 'name');
+foreach ($sourceDependencies as $name => $dependency) {
+    $resolvedPackage = $packages[$name] ?? null;
+    if ($resolvedPackage === null || $resolvedPackage['version'] !== $dependency['version']
+        || ($resolvedPackage['source']['reference'] ?? null) !== $dependency['ref']) {
+        throw new RuntimeException('Archive dependency differs from its reviewed VCS coordinate: ' . $name);
+    }
+    $sourceRecords[$name] = ['mode' => 'declared-vcs', 'version' => $resolvedPackage['version'],
+        'source_reference' => $resolvedPackage['source']['reference'], 'source_url' => $resolvedPackage['source']['url']];
+}
 $installed = $temporary . '/vendor/' . $manifest['name'];
 foreach (['src', 'resources/public-api/v1.json', 'resources/capabilities/v1.json', 'resources/service-map/v1.json', 'resources/migration/source-map.json', 'examples/consumer.php'] as $path) {
     if (!file_exists($installed . '/' . $path)) { throw new RuntimeException('Archive missing ' . $path); }
@@ -57,6 +60,6 @@ require 'vendor/__PACKAGE__/examples/consumer.php';
 SMOKE;
 file_put_contents($temporary . '/smoke.php', str_replace('__PACKAGE__', $manifest['name'], $smoke));
 $run([PHP_BINARY, 'smoke.php'], $temporary);
-$evidence = ['kind' => $sourceDependencies === [] ? 'archive-with-registry-dependencies' : 'archive-with-local-source-dependencies', 'release_attestation' => false, 'archive_sha256' => hash_file('sha256', $archive), 'consumer_directory' => $temporary, 'dependencies' => $sourceRecords];
+$evidence = ['kind' => 'archive-with-declared-dependencies', 'release_attestation' => false, 'archive_sha256' => hash_file('sha256', $archive), 'consumer_directory' => $temporary, 'dependencies' => $sourceRecords];
 file_put_contents($temporary . '/consumer-evidence.json', json_encode($evidence, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) . "\n");
 echo json_encode($evidence, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) . "\n";
