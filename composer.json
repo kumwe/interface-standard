@@ -8,7 +8,7 @@
     "php": "^8.5",
     "ext-mbstring": "*",
     "kumwe/contribution": "0.1.0",
-    "kumwe/access-control": "0.1.0"
+    "kumwe/access-control": "dev-agent/access-membership-di-completion"
   },
   "require-dev": {
     "phpstan/phpstan": "^2.1",
@@ -45,7 +45,7 @@
   "config": {
     "sort-packages": true
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "prefer-stable": true,
   "archive": {
     "exclude": [
