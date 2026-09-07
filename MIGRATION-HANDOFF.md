@@ -995,3 +995,5 @@ Before Phase 2, recompute source SHA-256 for each mapped App file and compare th
 ## Source candidate CI
 
 The `Source candidate gate` checks this PR using the explicitly recorded development dependency coordinates in `resources/source-ci-dependencies.json`. It installs QA tools, executes the package source gate and validates a fresh archive consumer. Development branches are not represented as released versions. This workflow is not the common immutable-release Package gate and cannot authorize publication or adoption.
+
+Access now resolves through its actual VCS `dev-main` coordinate after PR #4 merged and its branch was deleted. The source gate and fresh archive consumer install declared repositories directly, then verify the installed development version and source reference against `resources/source-ci-dependencies.json`; no path version override supplies a deleted coordinate. Reviewed Access commit `54dbaa1dbffeb09ba390a5e75e8adc951c437a41` preserves the tested source, Composer metadata, runtime resources and tests.
