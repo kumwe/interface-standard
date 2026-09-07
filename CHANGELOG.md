@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Reject invalid UTF-8 in surface purpose text before declaration admission.
+- Refresh extraction handoff evidence and preserve canonical dependency/test ownership.
+
 ## 0.1.0 - 2026-09-07
 
 - Extract 21 portable types into the canonical namespace.

@@ -94,6 +94,7 @@ final readonly class SurfaceDeclaration
         if (
             $purpose !== trim($purpose)
             || $purpose === ''
+            || !mb_check_encoding($purpose, 'UTF-8')
             || mb_strlen($purpose) > 255
             || preg_match('/[\x00-\x1F\x7F]/', $purpose) === 1
             || preg_match('/[<>{}]|javascript:|data:text\/html|<\?/i', $purpose) === 1
