@@ -22,3 +22,7 @@ Presentation preference state and persistence, rendering, navigation trees, rout
 The complete signatures and invariants are in [docs/public-api.md](docs/public-api.md). See [architecture](docs/architecture.md), [integration](docs/integration.md), [verification](docs/verification.md), and the [migration handoff](MIGRATION-HANDOFF.md).
 
 After installing dependencies, run `composer check`. `composer clean-consumer` builds a distribution archive and installs it in a new no-dev authoritative-classmap consumer. Unreleased dependencies require explicit local source inputs for preliminary verification, documented in `docs/verification.md`; these inputs never establish release verification.
+
+The initial 0.1.0 version is recorded for automatic publication after human merge.
+The same complete package gate runs on PRs and default-branch commits. See
+[releasing](docs/releasing.md) for publication and separate App adoption stages.

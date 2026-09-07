@@ -25,18 +25,18 @@ $sourceRecords = [];
 foreach ($sourceDependencies as $name => $dependency) {
     $require[$name] = $dependency['version'];
 }
-$consumer = ['name' => 'kumwe/isolated-consumer', 'require' => $require, 'repositories' => $repositories, 'minimum-stability' => 'dev', 'prefer-stable' => true];
+$consumer = ['name' => 'kumwe/isolated-consumer', 'require' => $require, 'repositories' => $repositories, 'minimum-stability' => 'stable', 'prefer-stable' => true];
 file_put_contents($temporary . '/composer.json', json_encode($consumer, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) . "\n");
 $run(['composer', 'install', '--no-dev', '--classmap-authoritative', '--no-scripts', '--no-plugins', '--no-interaction'], $temporary);
 $resolved = json_decode(file_get_contents($temporary . '/vendor/composer/installed.json'), true, 512, JSON_THROW_ON_ERROR);
 $packages = array_column($resolved['packages'], null, 'name');
 foreach ($sourceDependencies as $name => $dependency) {
     $resolvedPackage = $packages[$name] ?? null;
-    if ($resolvedPackage === null || $resolvedPackage['version'] !== $dependency['version']
+    if ($resolvedPackage === null || ltrim($resolvedPackage['version'], 'v') !== $dependency['version']
         || ($resolvedPackage['source']['reference'] ?? null) !== $dependency['ref']) {
-        throw new RuntimeException('Archive dependency differs from its reviewed VCS coordinate: ' . $name);
+        throw new RuntimeException('Archive dependency differs from its reviewed published coordinate: ' . $name);
     }
-    $sourceRecords[$name] = ['mode' => 'declared-vcs', 'version' => $resolvedPackage['version'],
+    $sourceRecords[$name] = ['mode' => 'published-source', 'version' => $resolvedPackage['version'],
         'source_reference' => $resolvedPackage['source']['reference'], 'source_url' => $resolvedPackage['source']['url']];
 }
 $installed = $temporary . '/vendor/' . $manifest['name'];

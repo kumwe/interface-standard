@@ -28,7 +28,7 @@ source:
   semantic_inputs: []
   examined_dependencies:
   - Canonical Contribution 0.1.0 owner, explicit SurfaceIdentifierPolicy and definition API.
-  - Canonical Access Control Capability dev source; no verified release.
+  - Published Access Control 0.1.0 Capability source at 54dbaa1dbffeb09ba390a5e75e8adc951c437a41.
   active_related_pull_requests: []
 framework_php:
   composer_package: kumwe/interface-standard
@@ -680,9 +680,9 @@ documentation:
   integration_or_consumer: docs/integration.md
   examples:
   - examples/consumer.php
-  changelog_record: CHANGELOG.md#unreleased
+  changelog_record: CHANGELOG.md#010---2026-09-07
 release_expectations:
-  version_policy: SemVer; maintainer chooses first version after review. No release is claimed.
+  version_policy: SemVer; initial 0.1.0 recorded for human merge and automatic publication.
   expected_artifact_types:
   - Composer ZIP distribution
   required_checks:
@@ -696,7 +696,7 @@ release_expectations:
   - '@security'
   - '@clean-consumer'
   required_registry_or_installer: Composer registry with immutable dist source
-  required_external_attestation: true
+  required_external_attestation: false
 next_task:
   phase_name: Complete and review Phase 1, then independently verify the immutable release before separate App adoption
   permitted_only_when:
@@ -931,9 +931,9 @@ decisions:
 - No aliases, vendor copies, host registrars or empty ConfigProvider.
 - Local source aliases are preliminary development verification only.
 blockers:
-- Release-on-record automation and integrity tests not implemented here.
+- Human merge of the initial 0.1.0 record and successful automatic publication remain pending.
 - Hosted PHP/platform matrix and final committed-head gate evidence pending.
-- Immutable dependency verification incomplete; publication and App adoption blocked.
+- Independent artifact verification and App adoption follow publication as separate stages.
 - Complete external security audit pending.
 ---
 
@@ -965,9 +965,9 @@ Their implementation, authority and tests remain App-owned. No copying, replacem
 
 ## Verification and blockers
 
-The source implementation passes the behavior suite and maximum-level static analysis locally. PHP syntax, API manifests, dependency guard, PSR-12, example and archive-consumer commands are reproducible from repository scripts. Local dependency inputs are development source snapshots with explicit dev-source aliases, not immutable dependency attestations. Exact target dependency coordinates are in composer.json. Contribution 0.1.0 has separately verified evidence; Access Control has no verified successor release, which blocks publication.
+The source implementation passes the behavior suite and maximum-level static analysis locally. PHP syntax, API manifests, dependency guard, PSR-12, example and archive-consumer commands are reproducible from repository scripts. Dependencies resolve from exact stable versions; the clean consumer verifies the reviewed Access Control source commit. Exact target dependency coordinates are in composer.json. Contribution 0.1.0 and Access Control 0.1.0 are published stable coordinates; the release job verifies their selected source/dist identities.
 
-Pending: release-on-record automation and its integrity tests, supported-platform hosted CI results, complete security audit, immutable dependency verification, and all final committed-head package/archive/consumer gates. The current draft must not be marked review-ready based solely on local tests. Parent coordination may add release automation and final-head evidence separately without changing these ownership decisions.
+Pending: human merge, automatic publication, and separate independent artifact verification. The complete package/archive/consumer and security gates run at the actual commit. The release workflow and its regression tests are implemented; GitHub CI must pass at the final PR head before review.
 
 ## Test ownership and Phase 2
 
