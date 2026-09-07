@@ -2,7 +2,7 @@
 
 `kumwe/interface-standard` supplies 21 portable interface value types, strict owner-bound surface declarations, and deterministic Kumwe Interface Standard 1.0 conformance diagnostics under `Kumwe\InterfaceStandard`.
 
-PHP 8.5 and mbstring are required. `kumwe/contribution` supplies ownership and declaration contracts; `kumwe/access-control` supplies `Capability`. No direct Access Context dependency is needed by this closure. The exact dependency constraints in Composer are target coordinates; Access Control has no verified release for this extraction, so publication and App adoption remain blocked.
+PHP 8.5 and mbstring are required. `kumwe/contribution` supplies ownership and declaration contracts; `kumwe/access-control` supplies `Capability`. No direct Access Context dependency is needed by this closure. Composer pins published Contribution 0.1.1 and Access Control 0.1.0. Access Control currently uses its explicit GitHub VCS source because Packagist has not indexed it; independently verify release identities before App adoption.
 
 ```php
 use Kumwe\Contribution\ContributionOwner;
@@ -23,6 +23,6 @@ The complete signatures and invariants are in [docs/public-api.md](docs/public-a
 
 After installing dependencies, run `composer check`. `composer clean-consumer` builds a distribution archive and installs it in a new no-dev authoritative-classmap consumer. Unreleased dependencies require explicit local source inputs for preliminary verification, documented in `docs/verification.md`; these inputs never establish release verification.
 
-The initial 0.1.0 version is recorded for automatic publication after human merge.
+Version 0.1.0 is published. The changelog describes the proposed successor; publication and independent verification remain separate gates.
 The same complete package gate runs on PRs and default-branch commits. See
 [releasing](docs/releasing.md) for publication and separate App adoption stages.

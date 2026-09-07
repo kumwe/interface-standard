@@ -7,7 +7,7 @@
   "require": {
     "php": "^8.5",
     "ext-mbstring": "*",
-    "kumwe/contribution": "0.1.0",
+    "kumwe/contribution": "0.1.1",
     "kumwe/access-control": "0.1.0"
   },
   "require-dev": {
@@ -31,6 +31,8 @@
     "security": "composer audit --abandoned=fail",
     "clean-consumer": "@php tools/clean-consumer.php",
     "check": [
+      "@composer:validate",
+      "@governance",
       "@lint",
       "@api",
       "@architecture",
@@ -39,8 +41,17 @@
       "@test",
       "@examples",
       "@security",
-      "@clean-consumer"
-    ]
+      "@clean-consumer",
+      "@release:check"
+    ],
+    "composer:validate": "composer validate --strict",
+    "release:check": [
+      "bash tools/test-release-record.sh",
+      "bash tools/test-release-integrity.sh",
+      "bash tools/test-release-on-record.sh",
+      "bash tools/test-package-dependencies.sh"
+    ],
+    "governance": "@php tools/verify-governed-manifests.php"
   },
   "config": {
     "sort-packages": true

@@ -1,7 +1,7 @@
 # Releasing
 
 The newest stable heading in CHANGELOG.md records the release version. This package
-starts at 0.1.0. Maintainers review and rebase-merge the release PR into the default
+uses the newest stable changelog record. Existing 0.1.0 tags are preserved. Maintainers review and rebase-merge the release PR into the default
 branch. No manual setup command is required.
 
 The release workflow reuses the complete package CI at the actual post-rebase
