@@ -1,0 +1,7 @@
+{
+  "schema": "kumwe-release-readiness/v1",
+  "status": "release-recorded",
+  "version": "0.1.0",
+  "reason": "Published Access Control 0.1.0 source is pinned and verified. Human merge triggers the complete package gate, published dependency source checks, and automatic publication.",
+  "publishing_permitted": true
+}
