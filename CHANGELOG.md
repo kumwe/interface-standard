@@ -2,6 +2,7 @@
 
 ## 0.1.1
 
+- Pin published Contribution 0.1.1 while preserving the compatible Access Control dependency graph.
 - Reject invalid UTF-8 in surface purpose text before declaration admission.
 - Refresh extraction handoff evidence and preserve canonical dependency/test ownership.
 
