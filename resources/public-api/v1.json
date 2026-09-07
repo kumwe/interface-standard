@@ -1,0 +1,1280 @@
+{
+    "schema": "kumwe-public-api/v1",
+    "package": "kumwe/interface-standard",
+    "types": {
+        "Kumwe\\InterfaceStandard\\ConformanceDiagnostic": {
+            "kind": "class",
+            "final": true,
+            "readonly": true,
+            "interfaces": [],
+            "constants": [],
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "message": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "path": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "severity": {
+                    "type": "Kumwe\\InterfaceStandard\\ConformanceSeverity",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "__construct": {
+                    "static": false,
+                    "parameters": [
+                        {
+                            "name": "code",
+                            "type": "string",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "severity",
+                            "type": "Kumwe\\InterfaceStandard\\ConformanceSeverity",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "path",
+                            "type": "string",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "message",
+                            "type": "string",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": ""
+                },
+                "toArray": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "array"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\ConformanceSeverity": {
+            "kind": "enum",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "BackedEnum",
+                "UnitEnum"
+            ],
+            "constants": {
+                "Error": "error",
+                "Warning": "warning"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "value": {
+                    "type": "string",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "cases": {
+                    "static": true,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "from": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "static"
+                },
+                "tryFrom": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "?static"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\CustomizationPermission": {
+            "kind": "class",
+            "final": true,
+            "readonly": true,
+            "interfaces": [],
+            "constants": [],
+            "properties": {
+                "scope": {
+                    "type": "Kumwe\\InterfaceStandard\\CustomizationScope",
+                    "readonly": true
+                },
+                "slot": {
+                    "type": "Kumwe\\InterfaceStandard\\CustomizationSlot",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "__construct": {
+                    "static": false,
+                    "parameters": [
+                        {
+                            "name": "slot",
+                            "type": "Kumwe\\InterfaceStandard\\CustomizationSlot",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "scope",
+                            "type": "Kumwe\\InterfaceStandard\\CustomizationScope",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": ""
+                },
+                "toArray": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "array"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\CustomizationScope": {
+            "kind": "enum",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "BackedEnum",
+                "UnitEnum"
+            ],
+            "constants": {
+                "Administrator": "administrator",
+                "RoleWorkspace": "role-workspace",
+                "Site": "site",
+                "User": "user"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "value": {
+                    "type": "string",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "cases": {
+                    "static": true,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "from": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "static"
+                },
+                "tryFrom": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "?static"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\CustomizationSlot": {
+            "kind": "enum",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "BackedEnum",
+                "UnitEnum"
+            ],
+            "constants": {
+                "Columns": "columns",
+                "DashboardCards": "dashboard-cards",
+                "Density": "density",
+                "LabelsHelp": "labels-help",
+                "LandingWorkspace": "landing-workspace",
+                "Layout": "layout",
+                "NavigationShortcuts": "navigation-shortcuts",
+                "SavedViews": "saved-views",
+                "ThemeMode": "theme-mode"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "value": {
+                    "type": "string",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "cases": {
+                    "static": true,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "from": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "static"
+                },
+                "tryFrom": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "?static"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\IconName": {
+            "kind": "class",
+            "final": true,
+            "readonly": true,
+            "interfaces": [
+                "Stringable"
+            ],
+            "constants": [],
+            "properties": [],
+            "methods": {
+                "__toString": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "string"
+                },
+                "fromString": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "Kumwe\\InterfaceStandard\\IconName"
+                },
+                "value": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "string"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\InterfaceStandardVersion": {
+            "kind": "enum",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "BackedEnum",
+                "UnitEnum"
+            ],
+            "constants": {
+                "Kis1": "kis-1.0"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "value": {
+                    "type": "string",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "cases": {
+                    "static": true,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "from": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "static"
+                },
+                "tryFrom": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "?static"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\ResourceName": {
+            "kind": "class",
+            "final": true,
+            "readonly": true,
+            "interfaces": [
+                "Stringable"
+            ],
+            "constants": [],
+            "properties": [],
+            "methods": {
+                "__toString": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "string"
+                },
+                "fromString": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "Kumwe\\InterfaceStandard\\ResourceName"
+                },
+                "value": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "string"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\ResponsiveElement": {
+            "kind": "class",
+            "final": true,
+            "readonly": true,
+            "interfaces": [],
+            "constants": [],
+            "properties": {
+                "element": {
+                    "type": "Kumwe\\InterfaceStandard\\ResourceName",
+                    "readonly": true
+                },
+                "mayCollapse": {
+                    "type": "bool",
+                    "readonly": true
+                },
+                "priority": {
+                    "type": "Kumwe\\InterfaceStandard\\ResponsivePriority",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "__construct": {
+                    "static": false,
+                    "parameters": [
+                        {
+                            "name": "element",
+                            "type": "Kumwe\\InterfaceStandard\\ResourceName",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "priority",
+                            "type": "Kumwe\\InterfaceStandard\\ResponsivePriority",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "mayCollapse",
+                            "type": "bool",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": ""
+                },
+                "toArray": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "array"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\ResponsivePriority": {
+            "kind": "enum",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "BackedEnum",
+                "UnitEnum"
+            ],
+            "constants": {
+                "Essential": "essential",
+                "Optional": "optional",
+                "Primary": "primary",
+                "Secondary": "secondary"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "value": {
+                    "type": "string",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "cases": {
+                    "static": true,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "from": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "static"
+                },
+                "tryFrom": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "?static"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfaceActor": {
+            "kind": "enum",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "BackedEnum",
+                "UnitEnum"
+            ],
+            "constants": {
+                "Administrator": "administrator",
+                "Portal": "portal",
+                "Public": "public"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "value": {
+                    "type": "string",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "cases": {
+                    "static": true,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "from": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "static"
+                },
+                "tryFrom": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "?static"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfaceArea": {
+            "kind": "enum",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "BackedEnum",
+                "UnitEnum"
+            ],
+            "constants": {
+                "Administrator": "administrator",
+                "Portal": "portal",
+                "Public": "public",
+                "Template": "template"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "value": {
+                    "type": "string",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "cases": {
+                    "static": true,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "from": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "static"
+                },
+                "tryFrom": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "?static"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfaceConformanceReport": {
+            "kind": "class",
+            "final": true,
+            "readonly": true,
+            "interfaces": [],
+            "constants": [],
+            "properties": [],
+            "methods": {
+                "__construct": {
+                    "static": false,
+                    "parameters": [
+                        {
+                            "name": "diagnostics",
+                            "type": "iterable",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": ""
+                },
+                "conforms": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "bool"
+                },
+                "diagnostics": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "toArray": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "array"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfaceConformanceValidator": {
+            "kind": "class",
+            "final": true,
+            "readonly": true,
+            "interfaces": [],
+            "constants": [],
+            "properties": [],
+            "methods": {
+                "allowsCustomizationAtOrBelow": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "slot",
+                            "type": "Kumwe\\InterfaceStandard\\CustomizationSlot",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "ceiling",
+                            "type": "Kumwe\\InterfaceStandard\\CustomizationScope",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "requested",
+                            "type": "Kumwe\\InterfaceStandard\\CustomizationScope",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "bool"
+                },
+                "assertConforms": {
+                    "static": false,
+                    "parameters": [
+                        {
+                            "name": "declaration",
+                            "type": "Kumwe\\InterfaceStandard\\SurfaceDeclaration",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "void"
+                },
+                "validate": {
+                    "static": false,
+                    "parameters": [
+                        {
+                            "name": "declaration",
+                            "type": "Kumwe\\InterfaceStandard\\SurfaceDeclaration",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "Kumwe\\InterfaceStandard\\SurfaceConformanceReport"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfaceConformanceViolation": {
+            "kind": "class",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "Stringable",
+                "Throwable"
+            ],
+            "constants": [],
+            "properties": {
+                "report": {
+                    "type": "Kumwe\\InterfaceStandard\\SurfaceConformanceReport",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "__construct": {
+                    "static": false,
+                    "parameters": [
+                        {
+                            "name": "report",
+                            "type": "Kumwe\\InterfaceStandard\\SurfaceConformanceReport",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": ""
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfaceDeclaration": {
+            "kind": "class",
+            "final": true,
+            "readonly": true,
+            "interfaces": [],
+            "constants": [],
+            "properties": {
+                "actor": {
+                    "type": "Kumwe\\InterfaceStandard\\SurfaceActor",
+                    "readonly": true
+                },
+                "area": {
+                    "type": "Kumwe\\InterfaceStandard\\SurfaceArea",
+                    "readonly": true
+                },
+                "capabilities": {
+                    "type": "array",
+                    "readonly": true
+                },
+                "customization": {
+                    "type": "array",
+                    "readonly": true
+                },
+                "icon": {
+                    "type": "?Kumwe\\InterfaceStandard\\IconName",
+                    "readonly": true
+                },
+                "intent": {
+                    "type": "Kumwe\\InterfaceStandard\\SurfaceIntent",
+                    "readonly": true
+                },
+                "owner": {
+                    "type": "Kumwe\\Contribution\\ContributionOwner",
+                    "readonly": true
+                },
+                "pattern": {
+                    "type": "Kumwe\\InterfaceStandard\\SurfacePattern",
+                    "readonly": true
+                },
+                "purpose": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "resource": {
+                    "type": "Kumwe\\InterfaceStandard\\ResourceName",
+                    "readonly": true
+                },
+                "responsive": {
+                    "type": "array",
+                    "readonly": true
+                },
+                "standard": {
+                    "type": "Kumwe\\InterfaceStandard\\InterfaceStandardVersion",
+                    "readonly": true
+                },
+                "states": {
+                    "type": "array",
+                    "readonly": true
+                },
+                "surface": {
+                    "type": "Kumwe\\InterfaceStandard\\SurfaceId",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "__construct": {
+                    "static": false,
+                    "parameters": [
+                        {
+                            "name": "owner",
+                            "type": "Kumwe\\Contribution\\ContributionOwner",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "surface",
+                            "type": "Kumwe\\InterfaceStandard\\SurfaceId",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "standard",
+                            "type": "Kumwe\\InterfaceStandard\\InterfaceStandardVersion",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "area",
+                            "type": "Kumwe\\InterfaceStandard\\SurfaceArea",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "actor",
+                            "type": "Kumwe\\InterfaceStandard\\SurfaceActor",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "intent",
+                            "type": "Kumwe\\InterfaceStandard\\SurfaceIntent",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "resource",
+                            "type": "Kumwe\\InterfaceStandard\\ResourceName",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "purpose",
+                            "type": "string",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "pattern",
+                            "type": "Kumwe\\InterfaceStandard\\SurfacePattern",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "capabilities",
+                            "type": "array",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "states",
+                            "type": "array",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "customization",
+                            "type": "array",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "responsive",
+                            "type": "array",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "icon",
+                            "type": "?Kumwe\\InterfaceStandard\\IconName",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": ""
+                },
+                "fromArray": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "owner",
+                            "type": "Kumwe\\Contribution\\ContributionOwner",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "data",
+                            "type": "array",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "Kumwe\\InterfaceStandard\\SurfaceDeclaration"
+                },
+                "toArray": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "array"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfaceDefinition": {
+            "kind": "class",
+            "final": true,
+            "readonly": true,
+            "interfaces": [
+                "Kumwe\\Contribution\\ContributionDefinition"
+            ],
+            "constants": [],
+            "properties": {
+                "declaration": {
+                    "type": "Kumwe\\InterfaceStandard\\SurfaceDeclaration",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "admit": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "declaration",
+                            "type": "Kumwe\\InterfaceStandard\\SurfaceDeclaration",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "validator",
+                            "type": "?Kumwe\\InterfaceStandard\\SurfaceConformanceValidator",
+                            "optional": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "default": null
+                        }
+                    ],
+                    "return": "Kumwe\\InterfaceStandard\\SurfaceDefinition"
+                },
+                "fromArray": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "owner",
+                            "type": "Kumwe\\Contribution\\ContributionOwner",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "data",
+                            "type": "array",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        },
+                        {
+                            "name": "validator",
+                            "type": "?Kumwe\\InterfaceStandard\\SurfaceConformanceValidator",
+                            "optional": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "default": null
+                        }
+                    ],
+                    "return": "Kumwe\\InterfaceStandard\\SurfaceDefinition"
+                },
+                "identifier": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "string"
+                },
+                "toArray": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "array"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfaceId": {
+            "kind": "class",
+            "final": true,
+            "readonly": true,
+            "interfaces": [
+                "Stringable"
+            ],
+            "constants": [],
+            "properties": [],
+            "methods": {
+                "__toString": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "string"
+                },
+                "fromString": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "Kumwe\\InterfaceStandard\\SurfaceId"
+                },
+                "value": {
+                    "static": false,
+                    "parameters": [],
+                    "return": "string"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfaceIntent": {
+            "kind": "enum",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "BackedEnum",
+                "UnitEnum"
+            ],
+            "constants": {
+                "Chooser": "chooser",
+                "Collection": "collection",
+                "Comparison": "comparison",
+                "Detail": "detail",
+                "Diagnostics": "diagnostics",
+                "Form": "form",
+                "Monitor": "monitor",
+                "ParentChild": "parent-child",
+                "Review": "review",
+                "Settings": "settings",
+                "Workflow": "workflow"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "value": {
+                    "type": "string",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "cases": {
+                    "static": true,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "from": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "static"
+                },
+                "tryFrom": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "?static"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfacePattern": {
+            "kind": "enum",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "BackedEnum",
+                "UnitEnum"
+            ],
+            "constants": {
+                "ChildCollection": "child-collection",
+                "CollectionWorkspace": "collection-workspace",
+                "Comparison": "comparison",
+                "DiagnosticsWorkspace": "diagnostics-workspace",
+                "DrawerForm": "drawer-form",
+                "FocusedForm": "focused-form",
+                "InlineSubform": "inline-subform",
+                "LocalNavigation": "local-navigation",
+                "MasterDetailWorkspace": "master-detail-workspace",
+                "ResourceChooser": "resource-chooser",
+                "ReviewConfirmation": "review-confirmation",
+                "SettingsWorkspace": "settings-workspace",
+                "StatusWorkspace": "status-workspace",
+                "StepFlow": "step-flow",
+                "Tabs": "tabs"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "value": {
+                    "type": "string",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "cases": {
+                    "static": true,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "from": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "static"
+                },
+                "tryFrom": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "?static"
+                }
+            }
+        },
+        "Kumwe\\InterfaceStandard\\SurfaceState": {
+            "kind": "enum",
+            "final": true,
+            "readonly": false,
+            "interfaces": [
+                "BackedEnum",
+                "UnitEnum"
+            ],
+            "constants": {
+                "Default": "default",
+                "Dense": "dense",
+                "Empty": "empty",
+                "Error": "error",
+                "PermissionReduced": "permission-reduced",
+                "ReadOnly": "read-only",
+                "Sparse": "sparse"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "readonly": true
+                },
+                "value": {
+                    "type": "string",
+                    "readonly": true
+                }
+            },
+            "methods": {
+                "cases": {
+                    "static": true,
+                    "parameters": [],
+                    "return": "array"
+                },
+                "from": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "static"
+                },
+                "tryFrom": {
+                    "static": true,
+                    "parameters": [
+                        {
+                            "name": "value",
+                            "type": "string|int",
+                            "optional": false,
+                            "by_reference": false,
+                            "variadic": false
+                        }
+                    ],
+                    "return": "?static"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "kumwe-test-ownership/v1",
+  "source_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+  "package_tests": [
+    {
+      "path": "tests/run.php",
+      "behavior": "Strict declaration parsing, bounds, normalization, serialization and canonical dependency contracts; ownership grammar and complete deterministic conformance diagnostics."
+    }
+  ],
+  "source_behavior_inputs": [
+    {
+      "path": "tests/Unit/InterfaceStandard/SurfaceDefinitionTest.php",
+      "sha256": "3a1ad67847d4651ec271299d09448d8f3d329731446e40b1fa3275686257116c"
+    },
+    {
+      "path": "tests/Unit/InterfaceStandard/SurfaceIdentifierParityTest.php",
+      "sha256": "1e49af50375aa6ae3636bfab30fdf6ea9c605d9708a6a6c10d64a40f061de70e"
+    }
+  ],
+  "retained_host_tests": [
+    "tests/Architecture/InterfaceStandardBoundaryTest.php",
+    "tests/Architecture/BusinessWorkspaceInterfaceStandardTest.php",
+    "tests/Unit/InterfaceStandard/InterfaceStandardSchemaTest.php",
+    "tests/Unit/InterfaceStandard/PresentationPreferenceTest.php",
+    "tests/Unit/InterfaceStandard/PresentationPreferenceResolverTest.php",
+    "tests/Unit/InterfaceStandard/PresentationPreferenceManagerTest.php",
+    "tests/Integration/InterfaceStandard/PresentationPreferencePersistenceIntegrationTest.php"
+  ],
+  "phase_2_note": "App is unchanged during Phase 1. Separate portable implementation assertions from mixed host tests and remove only those assertions after verified package adoption. Registry lifecycle and graphical parity portions remain host tests."
+}

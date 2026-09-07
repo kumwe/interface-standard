@@ -1,0 +1,15 @@
+{
+  "schema": "kumwe-capabilities/v1",
+  "package": "kumwe/interface-standard",
+  "capabilities": [
+    {
+      "id": "interface.surface.declaration",
+      "description": "Strict owner-bound semantic interface declarations with canonical serialization."
+    },
+    {
+      "id": "interface.surface.conformance",
+      "description": "Deterministic complete diagnostics for KIS 1.0 actor, intent, state, customization and responsive relationships."
+    }
+  ],
+  "authority": "No trust, authorization, activation, persistence or rendering authority."
+}

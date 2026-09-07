@@ -1,0 +1,534 @@
+{
+  "app": {
+    "source_commit": "24ecf956423c18933e824b43cea1bfb9127a79a9",
+    "files": [
+      {
+        "path": "src/InterfaceStandard/ConformanceDiagnostic.php",
+        "sha256": "97c9f0f9dd8611155d4ee4bd99a640a12289bc2bc152eaae5d224145ce07b915",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\ConformanceDiagnostic"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/CustomizationScope.php",
+        "sha256": "0fa09915381d4ff00eb73064539c2514a2dd86787d84b64158d174f3ca0485f5",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfaceIntent.php",
+        "sha256": "dff204c24d782c3735c81f83799f06f9b74ce437686173ef4b4a2857aec9c25d",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceIntent"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfaceDeclaration.php",
+        "sha256": "b6466bac836d0eb812e14138e838eeb31996f42239a71407f0ced3ea60a71b3d",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceDeclaration"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfaceConformanceViolation.php",
+        "sha256": "b419f07887670217bcef65d856f31ff786f0c6086c3aa237bbae23ffae51b355",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceConformanceViolation"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfaceDefinition.php",
+        "sha256": "a73d997d04828d5a20d1956c347d6eeb7926bc00f6758af2b89eba46ff7840a6",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceDefinition"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/CustomizationSlot.php",
+        "sha256": "22d05ee1aedcba4cd14537ee0e6f4d73ed19ea6689d431c0450c6d18beed66c5",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfaceId.php",
+        "sha256": "dfbbb01ee1e7bce95d8c2bc9e291e2163f3e913619228fe4b5ba53dbea1524f2",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/ResourceName.php",
+        "sha256": "8e77f638b2c3762900086017c25d3a076e02547e12af9c47a6863de18c3f0175",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\ResourceName"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/IconName.php",
+        "sha256": "b149f50e4e2508835489aaf8f9cbe7bd3eb27eae3c8ccec6d8792241eb246449",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\IconName"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/ResponsiveElement.php",
+        "sha256": "0bde3269e2c2b119899ccfb93a47c00c59f21478c7f860b3fc6c8a916e3ea00b",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\ResponsiveElement"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/ResponsivePriority.php",
+        "sha256": "19bb274e04dd2dd5174c792e1c317aaebeff4325e5376c49281d8e71a61c44e8",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\ResponsivePriority"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfaceConformanceValidator.php",
+        "sha256": "94c3110d482d2899075a9cd266e3a568207cb95599dc5cc301f8d897d3452464",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceConformanceValidator"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfaceConformanceReport.php",
+        "sha256": "0444ac203e2e20ca2fbd044ef2647abab37627782b3d5a569480c112c19821fc",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceConformanceReport"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/InterfaceStandardVersion.php",
+        "sha256": "eb604e8d140b3059871e2101491eca364c7dc77005598a46c6c72de02579b2ea",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\InterfaceStandardVersion"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfaceArea.php",
+        "sha256": "88cd05e5b19c1b92842be051bbb9183e8026758c41554f7570c5e8a9896a8582",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/CustomizationPermission.php",
+        "sha256": "69715f5df43435ea9d259c18ca02577cbf4a42883f67abe948818452a732b8e0",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationPermission"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfaceActor.php",
+        "sha256": "d4acb9b9727a7493866ce774cb42e6736d5490427845ebaf8c276e740a30dc6d",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceActor"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/ConformanceSeverity.php",
+        "sha256": "1b06830d99b7ce22db8af7851a242c40e111cf6733d779ab25faae8d12e517b3",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\ConformanceSeverity"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfaceState.php",
+        "sha256": "23dda2a78c3531ecc1675ebd4aee5cf462125116be4b5ff1067ab293ef82cb78",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceState"
+        ]
+      },
+      {
+        "path": "src/InterfaceStandard/SurfacePattern.php",
+        "sha256": "792132ccb368f80f94869e7101ec3ae6ac47f508f66a30bddba8aa23edafe605",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfacePattern"
+        ]
+      },
+      {
+        "path": "src/Presentation/Application/Preference/PresentationPreferenceResolution.php",
+        "sha256": "3a62c2be673594f59535e0e06fe42f1dede99b24875fdf223e1ead2736900f33",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope"
+        ]
+      },
+      {
+        "path": "src/Presentation/Application/Preference/PresentationPreferenceContext.php",
+        "sha256": "e436bdb7a0f90316eaaeeaf9c8215130e109c75e9756366ffbd75ffa5d9b43ee",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Presentation/Application/Preference/PresentationPreferenceResolver.php",
+        "sha256": "a015606de64be2113bf1ca4991487cc3184dab51f1bd6b9b6ee641269b52b3e3",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Presentation/Application/Dashboard/DashboardView.php",
+        "sha256": "59f9bf6864fa04b0eaac8f49cd054586e11f5a01b7ac230ca0eee8c3875614fa",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope"
+        ]
+      },
+      {
+        "path": "src/Presentation/Application/Dashboard/DashboardComposer.php",
+        "sha256": "df7c79c0031af8197c74988c0b21695ab0836efd7581878c8727c1d6c9476f2b",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Presentation/Application/Dashboard/DashboardWidget.php",
+        "sha256": "da237f23d72db67cad0a109ce5a915148841cb60d2f562c82993d6eea373ec8e",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Presentation/Application/Dashboard/DashboardWorkflowCatalog.php",
+        "sha256": "78e3a89c5298e286fce11c8dc54983ca6de77b2727a76b3f8fd8867592ab35ae",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Presentation/Application/Dashboard/DashboardPreferenceFormPresenter.php",
+        "sha256": "456a9cc222087a054a0c3cea32184c765e0c23daa8536f40e12e11135d469e9a",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Administrator/Http/Handler/AdministratorDashboardPreferencesHandler.php",
+        "sha256": "a9622fa66cbe0d268878bde001d905da06a3b4d62cbef10446682543cf7fa566",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Administrator/Http/Handler/AdministratorDashboardHandler.php",
+        "sha256": "09e7186743d295bc62f5d8c34da77f2742bbfc286584a92fc288da9a34cd9e44",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Extension/Contribution/CanonicalManifestInterpreter.php",
+        "sha256": "a24df034a790e9251cad6cb709402c18b6c1c65962ecd74422db935341727bdd",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceDefinition"
+        ]
+      },
+      {
+        "path": "src/Extension/Contribution/CoreContributionRegistrar.php",
+        "sha256": "7b7b26b3c8b846c21d8319300ea29d639a683b7426d6f08bbda7110f195825ff",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceDefinition"
+        ]
+      },
+      {
+        "path": "src/Extension/Contribution/CoreExtensionContributions.php",
+        "sha256": "4244c243184ddc89b63356b6ab431840361a4769f39dfe381d1a5d1b7f123a77",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceDefinition"
+        ]
+      },
+      {
+        "path": "src/Delivery/Http/Dashboard/DashboardPreferenceQueryDecoder.php",
+        "sha256": "6a0d5e9c6d96887df9edec4ac8170c80348afcad4be9e87b99eac46362f5e079",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea"
+        ]
+      },
+      {
+        "path": "src/Delivery/Http/Dashboard/DashboardPreferenceFormDecoder.php",
+        "sha256": "dc60c9b665e5cec5836b25bb3d8fa723e2bc9cde32db6a29542afbc8de157509",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot"
+        ]
+      },
+      {
+        "path": "src/Application/Presentation/Preference/PresentationPreferencePolicy.php",
+        "sha256": "a153f834cfd49a0101a32f86ca05a12341610d767c2cb563f01355aaf0ab9fb5",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Application/Presentation/Preference/PresentationPreferenceManager.php",
+        "sha256": "6101231775b432256e95be7f137d9c3082443e78b8f07fcb521740420a3e03dd",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope"
+        ]
+      },
+      {
+        "path": "src/Application/Presentation/Preference/RegisteredPresentationPreferencePolicy.php",
+        "sha256": "91481a64320491992f30c44bdd5bd56cb62eb08c7b1e76a27e5925dc79d0e6e0",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceConformanceValidator",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceDefinition",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Application/Presentation/Dashboard/DashboardPreferenceState.php",
+        "sha256": "ae94d679407567703860baf573c79dc3205b935e7d0e8adfe1ba2575762480b8",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Application/Presentation/Dashboard/DashboardPreferenceMutation.php",
+        "sha256": "fdbdfb739c72af4aac50e7142ea098a1c735e2ed5fe0838ec6909f7dfb5dc98d",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Application/Presentation/Dashboard/DashboardPreferenceService.php",
+        "sha256": "95682322b50980961a138940ea778e9c945d94641c49dd68348a92b3bfa47093",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Application/Presentation/Dashboard/DashboardPreferenceAccessGroupState.php",
+        "sha256": "5d279797d1e4fcfa4d9ee0eabe22885034e6850e559d7b9b78c6bfb08f243fff",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Portal/Http/Handler/PortalHomeHandler.php",
+        "sha256": "2645839af90916e0e35a906b70e7f376e3c80929c69924ba8ffe0c52b94f3d65",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "src/Portal/Http/Handler/PortalDashboardPreferencesHandler.php",
+        "sha256": "eb40f607daffdf1fca06fca747f9b78f1634477b83d74cb9c3c1218f1d8e21d1",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Support/DashboardPreferenceTestRuntime.php",
+        "sha256": "477ae1dce95af5bb1707c816e0921cbae63233e7e04dd469676c18c777288049",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Integration/InterfaceStandard/PresentationPreferencePersistenceIntegrationTest.php",
+        "sha256": "1cf65b11f41f3bd764d559c7a1de91a7082a377732f73daf857d14ea1516705a",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/InterfaceStandard/PresentationPreferenceResolverTest.php",
+        "sha256": "309222fb410ff68f0dad931d6b1ab763941242a75a1c65c3e56e18a85b27a134",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceDefinition",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/InterfaceStandard/SurfaceIdentifierParityTest.php",
+        "sha256": "1e49af50375aa6ae3636bfab30fdf6ea9c605d9708a6a6c10d64a40f061de70e",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/InterfaceStandard/PresentationPreferenceTest.php",
+        "sha256": "9a922fec9b823f4e28ce8bb37dd6ad03515b4b1fc3f6ea6e688383183bf710a6",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/InterfaceStandard/SurfaceDefinitionTest.php",
+        "sha256": "3a1ad67847d4651ec271299d09448d8f3d329731446e40b1fa3275686257116c",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\ConformanceDiagnostic",
+          "Kumwe\\App\\InterfaceStandard\\ConformanceSeverity",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationPermission",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\IconName",
+          "Kumwe\\App\\InterfaceStandard\\InterfaceStandardVersion",
+          "Kumwe\\App\\InterfaceStandard\\ResourceName",
+          "Kumwe\\App\\InterfaceStandard\\ResponsiveElement",
+          "Kumwe\\App\\InterfaceStandard\\ResponsivePriority",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceActor",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceConformanceReport",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceConformanceValidator",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceConformanceViolation",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceDeclaration",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceDefinition",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceIntent",
+          "Kumwe\\App\\InterfaceStandard\\SurfacePattern",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceState"
+        ]
+      },
+      {
+        "path": "tests/Unit/InterfaceStandard/PresentationPreferenceManagerTest.php",
+        "sha256": "ab5bd6c2e5842c3167730c59760e35932d44acc136a82a523f9a2b437896791b",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/InterfaceStandard/InterfaceStandardSchemaTest.php",
+        "sha256": "5da02edc871fbf140528b5489320fd0191f4005a9e1a3618f3a6c998ad2a136d",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\ResponsivePriority",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceActor",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceDefinition",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceIntent",
+          "Kumwe\\App\\InterfaceStandard\\SurfacePattern",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceState"
+        ]
+      },
+      {
+        "path": "tests/Unit/Presentation/Application/Dashboard/DashboardPreferenceFormPresenterTest.php",
+        "sha256": "a82420042da66d8fba8e7658e116f4918527ddfd6022297e55762083b5e3395f",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/Presentation/Application/Dashboard/DashboardComposerTest.php",
+        "sha256": "5f1c617fa3b33c605248b65b8483ebaf64ba9676eab663494dfad51848cf556a",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/Administrator/Http/Handler/AdministratorDashboardPreferencesHandlerTest.php",
+        "sha256": "8a8d66e62ac367cbc2681ce637032cea32aa5ef6486924c33bc258e9fd30d260",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/Delivery/Http/Dashboard/DashboardPreferenceFormDecoderTest.php",
+        "sha256": "ae1bea3e694c5ecef3ac1c08bfea9610d8128fa8a20d84a3b208f374219a7262",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot"
+        ]
+      },
+      {
+        "path": "tests/Unit/Delivery/Http/Dashboard/DashboardPreferenceQueryDecoderTest.php",
+        "sha256": "5b454b0fb2e5a0006df2f5ccf8da55f1bd9d8835898df5a0f083ff18604f45ca",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea"
+        ]
+      },
+      {
+        "path": "tests/Unit/Application/Presentation/Dashboard/DashboardPreferenceMutationTest.php",
+        "sha256": "40e18150b6741fb822425acf27af135748aeaf700a0f5035f64cd0b1b9d44928",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/Application/Presentation/Dashboard/DashboardPreferenceServiceTest.php",
+        "sha256": "0ec1a818c7f1e5b499d61c4bb4a84a551a66d8c0ed1aae289a2b7f28d058e72b",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceArea",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/Application/Presentation/Dashboard/DashboardPreferenceStateTest.php",
+        "sha256": "f7ebdc29b044a7b8fe1518576db61b41184c142e20884dde04dd0169b75b0b5a",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      },
+      {
+        "path": "tests/Unit/Portal/Http/PortalDashboardPreferencesHandlerTest.php",
+        "sha256": "d0af29b726b2726ac72cc1f97cbbe132cf673654f247122ec2e2e760159cdff0",
+        "symbols": [
+          "Kumwe\\App\\InterfaceStandard\\CustomizationScope",
+          "Kumwe\\App\\InterfaceStandard\\CustomizationSlot",
+          "Kumwe\\App\\InterfaceStandard\\SurfaceId"
+        ]
+      }
+    ]
+  },
+  "extension-sdk": {
+    "source_commit": "e8ec23f155c5836c6bd083f154a8efb6e50aec66",
+    "files": []
+  }
+}
