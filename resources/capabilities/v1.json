@@ -1,7 +1,7 @@
 {
     "schema": "kumwe-package-capabilities/v1",
     "package": "kumwe/interface-standard",
-    "release": "0.1.1",
+    "release": "0.1.2",
     "namespace": "Kumwe\\InterfaceStandard\\",
     "responsibility": "Typed interface declarations and deterministic semantic conformance.",
     "non_responsibilities": [
