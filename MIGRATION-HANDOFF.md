@@ -8,7 +8,7 @@ target:
   repository: "https://github.com/kumwe/interface-standard"
   artifact_identity: "kumwe/interface-standard"
   canonical_namespace_or_abi: "Kumwe\\InterfaceStandard"
-  branch: "codex/extraction-readiness-20260907"
+  branch: codex/integration-readiness-20260908
   pull_request: "https://github.com/kumwe/interface-standard/pull/4"
 source:
   app:
@@ -549,13 +549,13 @@ ownership:
   public_manifests:
     -
       path: "resources/public-api/v1.json"
-      sha256: "b57c940a1929ce1323f48c7fe4454774744ec36101d6df57c3cbb342e88d5603"
+      sha256: "b43cbc7230bb74355750d386a92567e75939c9435db2d743bf6e21e4a4a886ea"
     -
       path: "resources/capabilities/v1.json"
-      sha256: "44a3308c164b4ae816b89a8c7dc10705fb8260a6e90e59fe1d862abafc2f93ad"
+      sha256: "03b227f67703e57edc36502bc8b7129f33d002fcfbd285f56d59495545e44c2d"
     -
       path: "resources/service-map/v1.json"
-      sha256: "27cc5cbf0b2df88b6a18a6f8ca6ba33211a4ca9cf5fc6e93fbf4aa950ff6f193"
+      sha256: "0becbd85cc64870926e3798628b3b126d955180e633f1db8354ed9e50d481401"
   intentionally_excluded:
     - "Interface declarations, their full source/test inventories and portable conformance implementation are owned by this package. Host rendering, preferences, persistence and final authority remain App responsibilities."
 native_cpp: null
@@ -586,7 +586,7 @@ documentation:
   integration_or_consumer: "docs/integration.md"
   examples:
     - "examples/consumer.php"
-  changelog_record: "CHANGELOG.md / 0.1.1"
+  changelog_record: "CHANGELOG.md ## 0.1.2"
 release_expectations:
   version_policy: "Exact stable sibling package pins; preserve coherent released graphs until compatible successor releases exist."
   expected_artifact_types:
@@ -783,6 +783,14 @@ The machine record lists actual source mappings, known consumer paths and concre
 Package tests own portable values, validation, service behavior, explicit construction and malformed-input regressions. The machine record identifies the source suites to split. Host persistence, transactions, authority, transport and operational integration stay in App. After verified adoption, remove duplicate library implementation assertions from App together with their legacy source.
 
 ## Next-task execution notes
+
+The selected production dependency tuple is:
+
+- kumwe/contribution 0.1.1
+- kumwe/access-control 0.1.2
+
+Published dependency identities and independent archive consumers must be verified before adoption.
+The package gate enforces agreement between Composer constraints and the dependency evidence coordinates.
 
 Independent successor release verification and the final package gate remain necessary before App adoption. Install the exact independently verified successor; run Composer resolution, archive consumer gates and affected App integration tests before namespace removal. Run final source and clean archive gates before admitting the package; then update the App dependency lock, replace namespaces, retain host adapters and remove only the inventoried portable legacy implementations.
 

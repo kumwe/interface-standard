@@ -1,7 +1,18 @@
 {
   "schema": "kumwe-release-readiness/v1",
   "status": "release-recorded",
-  "version": "0.1.1",
-  "reason": "The successor records published Contribution 0.1.1 and Access Control 0.1.0 dependencies. Human merge triggers the complete package and release identity gates; this record is not a release attestation.",
-  "publishing_permitted": true
+  "version": "0.1.2",
+  "reason": "Exact dependency coordinates are recorded; independent artifact verification and the coordinated consumer release train remain required before adoption.",
+  "publishing_permitted": true,
+  "dependencies": {
+    "kumwe/contribution": {
+      "version": "0.1.1",
+      "attestation": null
+    },
+    "kumwe/access-control": {
+      "version": "0.1.2",
+      "attestation": null
+    }
+  },
+  "required_followup": "Verify each selected immutable source/archive and its clean consumer independently, then attach external evidence without altering released source."
 }
