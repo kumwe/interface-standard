@@ -9,7 +9,7 @@ target:
   artifact_identity: "kumwe/interface-standard"
   canonical_namespace_or_abi: "Kumwe\\InterfaceStandard"
   branch: codex/integration-readiness-20260908
-  pull_request: "https://github.com/kumwe/interface-standard/pull/4"
+  pull_request: https://github.com/kumwe/interface-standard/pull/5
 source:
   app:
     repository: "https://github.com/kumwe/app"
