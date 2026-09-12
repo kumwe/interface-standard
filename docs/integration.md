@@ -1,7 +1,17 @@
-# Integration and adoption
+# Host integration
 
-Install an exact independently verified release before changing App. See `resources/migration/source-map.json` for every namespace replacement and `consumer-inventory.json` for the inspected file-level references. Do not add aliases, wrappers, dual PSR-4 roots, or shadow implementations.
+Install an exact independently verified release and import canonical package types directly.
+`resources/migration/source-map.json` and `consumer-inventory.json` preserve source provenance and
+compatibility mappings. Do not introduce aliases, dual PSR-4 roots or shadow implementations.
 
-Build or parse a SurfaceDeclaration with a canonical ContributionOwner, then call SurfaceDefinition::admit or fromArray. Catch InvalidArgumentException for malformed metadata and SurfaceConformanceViolation for semantic errors; the latter exposes its complete report. Apply host capability checks and active-generation checks independently before delivery. Rendering and presentation-preference persistence remain host-owned.
+Build or parse a `SurfaceDeclaration` using a canonical `ContributionOwner`, then call
+`SurfaceDefinition::admit()` or `SurfaceDefinition::fromArray()`. Malformed metadata raises
+`InvalidArgumentException`; semantic errors raise `SurfaceConformanceViolation`, which exposes the
+complete diagnostic report. Core independently enforces capability and active-generation checks before
+delivery. Rendering and presentation-preference persistence remain host-owned.
 
-In Phase 2, reconcile App changes since the captured baseline, update every affected import and signature to the mapped canonical owner, delete the extracted App definitions, and move only portable implementation assertions out of mixed App tests. Retain host composition and lifecycle assertions listed in `resources/migration/test-ownership.json`. Update the App dependency lock, migration ledger, capability index and changelog; run affected host and integration-train gates. No App files were changed here.
+When changing a consumer's exact pin, inspect its current imports and source and run affected integration
+checks. Retain host composition, registry lifecycle and graphical parity assertions, as documented in
+`resources/migration/test-ownership.json`. Package-owned portable implementation tests belong to the
+library; host integration tests remain with the host. Update consumer dependency/evidence records with
+the selected version and independently verified artifact identities.

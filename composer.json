@@ -75,11 +75,5 @@
       "/phpcs.xml",
       "/.phpstan-cache"
     ]
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/kumwe/access-control"
-    }
-  ]
+  }
 }

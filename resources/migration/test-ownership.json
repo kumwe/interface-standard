@@ -26,5 +26,5 @@
     "tests/Unit/InterfaceStandard/PresentationPreferenceManagerTest.php",
     "tests/Integration/InterfaceStandard/PresentationPreferencePersistenceIntegrationTest.php"
   ],
-  "phase_2_note": "App is unchanged during Phase 1. Separate portable implementation assertions from mixed host tests and remove only those assertions after verified package adoption. Registry lifecycle and graphical parity portions remain host tests."
+  "host_boundary_note": "Core retains host composition, registry lifecycle and graphical parity tests. Portable implementation tests belong to the package; inspect current consumer source before removing duplicates."
 }

@@ -1,8 +1,21 @@
-# Interface Standard
+# Kumwe Interface Standard
 
-`kumwe/interface-standard` supplies 21 portable interface value types, strict owner-bound surface declarations, and deterministic Kumwe Interface Standard 1.0 conformance diagnostics under `Kumwe\InterfaceStandard`.
+[![Latest version][version-badge]][package]
+[![Interface Standard CI][ci-badge]][ci]
+[![PHP requirement][php-badge]][package]
+[![License][license-badge]](LICENSE)
 
-PHP 8.5 and mbstring are required. `kumwe/contribution` supplies ownership and declaration contracts; `kumwe/access-control` supplies `Capability`. No direct Access Context dependency is needed by this closure. Composer pins published Contribution 0.1.1 and Access Control 0.1.0. Access Control currently uses its explicit GitHub VCS source because Packagist has not indexed it; independently verify release identities before App adoption.
+Portable interface values, strict owner-bound surface declarations and deterministic Kumwe Interface
+Standard 1.0 conformance diagnostics under `Kumwe\InterfaceStandard`.
+
+## Installation
+
+```bash
+composer require kumwe/interface-standard:0.1.2
+```
+
+Requires PHP `^8.5`, `ext-mbstring`, Contribution 0.1.1 and Access Control 0.1.2, available from Packagist.
+Pre-1.0 consumers use an independently verified exact package version.
 
 ```php
 use Kumwe\Contribution\ContributionOwner;
@@ -15,14 +28,47 @@ $surface = SurfaceDefinition::fromArray(
 $canonicalMetadata = $surface->toArray();
 ```
 
-Run `php examples/consumer.php` for a complete declaration. Parsing enforces exact keys, bounded lists, supported versions, plain-text metadata, and ownership. Admission then reports all semantic errors for actor/area, intent/pattern, required states, customization scope, and responsive priorities. Capability references describe requirements; the host enforces them.
+Run `composer examples` for [a complete declaration](examples/consumer.php). Parsing enforces exact keys,
+bounded lists, supported versions, plain-text metadata and ownership. Semantic admission reports errors
+for actor/area, intent/pattern, required states, customization scope and responsive priorities.
 
-Presentation preference state and persistence, rendering, navigation trees, routes, trust, active-generation admission, and authorization remain host responsibilities. There is no container provider or hidden global registry. The source's three presentation preference types are explicitly excluded.
+## Contract with Kumwe Core
 
-The complete signatures and invariants are in [docs/public-api.md](docs/public-api.md). See [architecture](docs/architecture.md), [integration](docs/integration.md), [verification](docs/verification.md), and the [migration handoff](MIGRATION-HANDOFF.md).
+The package owns vocabulary, typed declarations and semantic conformance. Capability references describe
+requirements; Core enforces them. Rendering, routes, navigation trees, trust, active-generation admission,
+authorization and presentation-preference state/persistence belong to Core and other consuming hosts.
 
-After installing dependencies, run `composer check`. `composer clean-consumer` builds a distribution archive and installs it in a new no-dev authoritative-classmap consumer. Unreleased dependencies require explicit local source inputs for preliminary verification, documented in `docs/verification.md`; these inputs never establish release verification.
+There is no container provider or hidden global registry. Consumers construct the package values and
+stateless validator directly, using canonical Contribution ownership and Access Control capability types.
+See [integration](docs/integration.md) and [architecture](docs/architecture.md) for the exact boundary.
 
-Version 0.1.0 is published. The changelog describes the proposed successor; publication and independent verification remain separate gates.
-The same complete package gate runs on PRs and default-branch commits. See
-[releasing](docs/releasing.md) for publication and separate App adoption stages.
+## API and development
+
+[Public API](docs/public-api.md) documents every signature and invariant. The
+[release contract record](docs/release-record.md) preserves source mappings, manifest digests, compatibility
+requirements and consumer/test ownership. Historical source mappings do not assert current Core adoption.
+
+```bash
+composer install
+composer check
+```
+
+The complete gate checks syntax, API and source closure, architecture, static analysis, style, behavior,
+examples, dependency security, archive consumers and release automation. `composer clean-consumer`
+installs the real distribution ZIP into a fresh production-only authoritative-classmap consumer.
+[Verification](docs/verification.md) explains evidence and explicit development dependency overrides.
+
+## Releases and license
+
+The version badge follows Packagist; the CI badge follows the actual default-branch package workflow.
+Publication, passing package CI and independent artifact verification remain separate facts.
+[Release policy](docs/releasing.md) requires stable source identity and preserves existing artifacts.
+
+Licensed under [Apache-2.0](LICENSE). See [security policy](SECURITY.md).
+
+[version-badge]: https://img.shields.io/packagist/v/kumwe/interface-standard
+[package]: https://packagist.org/packages/kumwe/interface-standard
+[ci-badge]: https://github.com/kumwe/interface-standard/actions/workflows/ci.yml/badge.svg?branch=main
+[ci]: https://github.com/kumwe/interface-standard/actions/workflows/ci.yml
+[php-badge]: https://img.shields.io/packagist/dependency-v/kumwe/interface-standard/php
+[license-badge]: https://img.shields.io/packagist/l/kumwe/interface-standard
