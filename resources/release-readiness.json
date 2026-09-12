@@ -2,7 +2,7 @@
   "schema": "kumwe-release-readiness/v1",
   "status": "release-recorded",
   "version": "0.1.2",
-  "reason": "Exact dependency coordinates are recorded; independent artifact verification and the coordinated consumer release train remain required before adoption.",
+  "reason": "Exact dependency coordinates are recorded; independent artifact verification remains required before host adoption.",
   "publishing_permitted": true,
   "dependencies": {
     "kumwe/contribution": {

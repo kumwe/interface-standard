@@ -21,6 +21,6 @@ foreach ($dependencies as $name => $dependency) {
     $evidence[$name] = ['version' => $package['version'], 'source_reference' => $package['source']['reference'],
         'source_url' => $package['source']['url'], 'mode' => 'published-source'];
 }
-file_put_contents($root . '/../candidate-dependency-evidence.json', json_encode([
+file_put_contents($root . '/../package-dependency-evidence.json', json_encode([
     'release_attestation' => false, 'dependencies' => $evidence,
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) . "\n");

@@ -1,7 +1,7 @@
 # Releasing
 
 The newest stable heading in CHANGELOG.md records the release version. This package
-uses the newest stable changelog record. Existing 0.1.0 tags are preserved. Maintainers review and rebase-merge the release PR into the default
+uses the newest stable changelog record. Existing tags are preserved. Maintainers review and rebase-merge into the default
 branch. No manual setup command is required.
 
 The release workflow reuses the complete package CI at the actual post-rebase
@@ -32,6 +32,6 @@ Before publication, the workflow resolves production dependencies and verifies
 all selected Kumwe stable version tags against Composer source and dist commits.
 Run bash tools/test-package-dependencies.sh when changing that verifier.
 
-Access Control is not yet indexed by Packagist. The explicit GitHub VCS repository
-resolves its real stable tag and ZIP archive; consumers must configure that
-repository at their Composer root until it is registered.
+Contribution 0.1.1 and Access Control 0.1.2 resolve directly from Packagist. No root VCS override is required.
+The [release contract record](release-record.md) preserves consumer requirements and independent verification
+obligations.
